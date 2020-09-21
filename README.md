@@ -22,4 +22,5 @@ Escolha a opção inmrobo
 Click em Run inmrobo
 
 ## Resultado
+ver imagem no git
 

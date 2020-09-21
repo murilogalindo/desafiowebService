@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "7fb5aa26-ea89-93aa-02cc-c9168473c013",
+		"name": "inmrobo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET //empregado/list_all",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ca36f955-95b1-4333-a98f-b96ab482ff68",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "automacao",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "inmetrics",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://inm-api-test.herokuapp.com/empregado/list_all",
+					"protocol": "https",
+					"host": [
+						"inm-api-test",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"empregado",
+						"list_all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET //empregado/list/empregadoDto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f65e7a33-8b23-4791-9a24-fbac7dde65df",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "automacao",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "inmetrics",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.api+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"data\": {\n    \"type\": \"apns\",\n    \"attributes\": {\n      \"apn\": \"claro.agoravai.apns\",\n      \"msisdn_pattern\": \"5519\"\n    }\n  \n}\n}"
+				},
+				"url": {
+					"raw": "https://inm-api-test.herokuapp.com/empregado/list/3563",
+					"protocol": "https",
+					"host": [
+						"inm-api-test",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"empregado",
+						"list",
+						"3563"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT/empregado/alterar/empregadoDto",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "automacao",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "inmetrics",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"admissao\": \"10/09/2020\",\n  \"cargo\": \"Contador Pleno\",\n  \"comissao\": \"2.000,00\",\n  \"cpf\": \"087.286.160-06\",\n  \"departamentoId\": 1,\n  \"nome\": \"Roberto Firmino\",\n  \"salario\": \"6.000,00\",\n  \"sexo\": \"m\",\n  \"tipoContratacao\": \"clt\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://inm-api-test.herokuapp.com/empregado/alterar/3564",
+					"protocol": "https",
+					"host": [
+						"inm-api-test",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"empregado",
+						"alterar",
+						"3564"
+					]
+				},
+				"description": "Generated from a curl request: \ncurl -X DELETE \\\"http://localhost:4000/api/v1/users/1\\\" -H \\\"accept: application/json\\\""
+			},
+			"response": []
+		},
+		{
+			"name": "POST /empregado/cadastrar cadastrar",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "automacao",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "inmetrics",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "928d6d11-c7b0-586e-2a4d-c897e7a9ddea"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"admissao\": \"20/09/2020\",\n  \"cargo\": \"Contador Senior\",\n  \"comissao\": \"2.000,00\",\n  \"cpf\": \"194.829.300-53\",\n  \"departamentoId\": 1,\n  \"nome\": \"Rodrigo Cursino\",\n  \"salario\": \"5.000,00\",\n  \"sexo\": \"m\",\n  \"tipoContratacao\": \"pj\"\n}"
+				},
+				"url": {
+					"raw": "https://inm-api-test.herokuapp.com/empregado/cadastrar",
+					"protocol": "https",
+					"host": [
+						"inm-api-test",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"empregado",
+						"cadastrar"
+					]
+				},
+				"description": "Generated from a curl request: \ncurl -X POST \\\n  https://inm-api-test.herokuapp.com/empregado/cadastrar\n  -H 'Accept: application/vnd.api+json' \\\n  -H 'Cache-Control: no-cache' \\\n  -H 'Content-Type: application/vnd.api+json' \\\n  -H 'Postman-Token: 928d6d11-c7b0-586e-2a4d-c897e7a9ddea' \\\n  -d '{\n    \\\"data\\\": {\n        \\\"type\\\": \\\"users\\\",\n        \\\"attributes\\\": {\n            \\\"msisdn\\\": \\\"test.msisdn\\\"\n        }\n    }\n}\n'"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "68385866-445d-433b-9d13-00d8d4f27db0",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6b3c8ef0-0b3b-4363-96d0-de26e7a228cf",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
